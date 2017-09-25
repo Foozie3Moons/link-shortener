@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  div.well.well-small
+    h1 Shortened Link
+    a(href='/' + link.hash)
+      h2=link.hashedUrl

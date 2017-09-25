@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Link Shortener
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='/css/style.css')
+  body
+    div.well.well-small
+      h1 Generate Yo Link Biness
+      form(method='POST' action='/links')
+        div.form-group.row
+          div.col-xs-10
+            input.form-control(type='text' name='url' placeholder='Generate Link')
+            input(type="submit", style="position: absolute; left: -9999px; width: 1px; height: 1px;", tabindex="-1")
+          div.col-xs-2
+            button.btn.btn-default(type='submit')
+              span.glyphicon.glyphicon-search
+    block content
